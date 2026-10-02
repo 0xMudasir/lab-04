@@ -1,0 +1,119 @@
+# Data inspection - Multi-smell dataset (provided CSV)
+raw shape: (107554, 22)
+exact duplicate rows removed: 0
+shape after dedup: (107554, 22)
+
+## dtypes
+File                         str
+Project                      str
+Logical Lines              int64
+Distinct Operators         int64
+Distinct Operands          int64
+Total Operators            int64
+Total Operands             int64
+Vocabulary                 int64
+Length                     int64
+Calculated Length        float64
+Volume                   float64
+Difficulty               float64
+Effort                   float64
+Time Required            float64
+Bugs                     float64
+Cyclomatic Complexity      int64
+Class                        str
+Long method                int64
+God class                  int64
+Feature envy               int64
+Data class                 int64
+smelly                     int64
+
+## missing values per column
+File                     0
+Project                  0
+Logical Lines            0
+Distinct Operators       0
+Distinct Operands        0
+Total Operators          0
+Total Operands           0
+Vocabulary               0
+Length                   0
+Calculated Length        0
+Volume                   0
+Difficulty               0
+Effort                   0
+Time Required            0
+Bugs                     0
+Cyclomatic Complexity    0
+Class                    0
+Long method              0
+God class                0
+Feature envy             0
+Data class               0
+smelly                   0
+
+## target 'smelly' distribution
+        count    pct
+smelly              
+0       97636  90.78
+1        9918   9.22
+
+## Long method x smelly
+smelly           0     1
+Long method             
+0            97636  8352
+1                0  1566
+
+## God class x smelly
+smelly         0     1
+God class             
+0          97636  5585
+1              0  4333
+
+## Feature envy x smelly
+smelly            0     1
+Feature envy             
+0             97636  7922
+1                 0  1996
+
+## Data class x smelly
+smelly          0     1
+Data class             
+0           97636  6634
+1               0  3284
+
+## categorical 'Project' (89 levels) - top 15
+Project
+jena        4979
+hive        4851
+hadoop      4336
+hbase       4288
+nifi        3873
+activemq    3802
+accumulo    3786
+beam        3726
+openjpa     3604
+cxf         3454
+cayenne     3031
+airavata    2893
+drill       2419
+calcite     2416
+cocoon      2011
+
+## numeric feature summary
+                          count          mean           std  min        25%         50%          75%           max
+Logical Lines          107554.0  6.849925e+01  1.088391e+03  0.0   2.000000    9.000000    34.000000  6.929200e+04
+Distinct Operators     107554.0  3.347370e+00  3.063944e+00  0.0   1.000000    3.000000     5.000000  1.600000e+01
+Distinct Operands      107554.0  4.477253e+01  9.417778e+01  0.0   7.000000   20.000000    55.000000  5.112000e+03
+Total Operators        107554.0  7.029024e+01  1.023772e+03  0.0   1.000000    7.000000    35.000000  6.532000e+04
+Total Operands         107554.0  3.689624e+02  5.884077e+03  0.0  10.000000   43.000000   174.000000  3.834080e+05
+Vocabulary             107554.0  4.811990e+01  9.571620e+01  0.0   8.000000   23.000000    60.000000  5.123000e+03
+Length                 107554.0  4.392526e+02  6.905866e+03  0.0  11.000000   52.000000   212.000000  4.487280e+05
+Calculated Length      107554.0  3.053048e+02  9.537642e+02  0.0  19.651484   91.193449   327.579784  6.301622e+04
+Volume                 107554.0  3.935903e+03  7.758789e+04  0.0  33.219281  232.192809  1247.292218  5.233965e+06
+Difficulty             107554.0  6.532069e+00  1.680666e+01  0.0   0.750000    2.727273     8.076923  5.333525e+02
+Effort                 107554.0  1.011686e+06  3.543825e+07  0.0  19.651484  587.120203  9727.950360  2.790589e+09
+Time Required          107554.0  5.620477e+04  1.968792e+06  0.0   1.091749   32.617789   540.441687  1.550327e+08
+Bugs                   107554.0  1.311968e+00  2.586263e+01  0.0   0.011073    0.077398     0.415764  1.744655e+03
+Cyclomatic Complexity  107554.0  3.580484e+01  7.833972e+02  1.0   1.000000    2.000000     9.000000  4.934400e+04
+
+rows whose feature vector + label duplicates another row: 33789 (31.4%)

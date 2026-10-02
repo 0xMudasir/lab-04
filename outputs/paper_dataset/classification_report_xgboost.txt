@@ -1,0 +1,8 @@
+               precision    recall  f1-score   support
+
+Non-buggy (0)     0.9873    0.9871    0.9872     57411
+    Buggy (1)     0.8891    0.8908    0.8900      6659
+
+     accuracy                         0.9771     64070
+    macro avg     0.9382    0.9390    0.9386     64070
+ weighted avg     0.9771    0.9771    0.9771     64070

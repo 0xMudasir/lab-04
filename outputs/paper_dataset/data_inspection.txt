@@ -1,0 +1,147 @@
+# Data inspection - Paper dataset (Diouf et al., PredictSecBugs)
+raw shape: (338443, 39)
+exact duplicate rows removed: 18095
+shape after dedup: (320348, 36)
+
+## dtypes
+Name                         str
+buggy                      int64
+commit_date                  str
+commit_sha                   str
+extension                    str
+AvgLineCode              float64
+CountDeclClass           float64
+RatioCommentToCode       float64
+CountStmtExe             float64
+AvgCyclomaticStrict      float64
+CountLine                float64
+SumCyclomatic            float64
+AvgCyclomatic            float64
+SumEssential             float64
+MaxCyclomatic            float64
+AvgLineComment           float64
+AvgCyclomaticModified    float64
+AvgEssential             float64
+SumCyclomaticModified    float64
+CountLineComment         float64
+CountLineCode            float64
+MaxCyclomaticModified    float64
+CountLineBlank           float64
+CountStmtDecl            float64
+AvgLine                  float64
+MaxEssential             float64
+CountDeclFunction        float64
+MaxNesting               float64
+AvgLineBlank             float64
+SumCyclomaticStrict      float64
+CountStmt                float64
+file_path                    str
+Ecosystem                    str
+Commit_id                    str
+Source                       str
+key                          str
+
+## missing values per column
+Name                     0
+buggy                    0
+commit_date              0
+commit_sha               0
+extension                0
+AvgLineCode              0
+CountDeclClass           0
+RatioCommentToCode       0
+CountStmtExe             0
+AvgCyclomaticStrict      0
+CountLine                0
+SumCyclomatic            0
+AvgCyclomatic            0
+SumEssential             0
+MaxCyclomatic            0
+AvgLineComment           0
+AvgCyclomaticModified    0
+AvgEssential             0
+SumCyclomaticModified    0
+CountLineComment         0
+CountLineCode            0
+MaxCyclomaticModified    0
+CountLineBlank           0
+CountStmtDecl            0
+AvgLine                  0
+MaxEssential             0
+CountDeclFunction        0
+MaxNesting               0
+AvgLineBlank             0
+SumCyclomaticStrict      0
+CountStmt                0
+file_path                0
+Ecosystem                0
+Commit_id                0
+Source                   0
+key                      0
+
+## target 'buggy' distribution
+        count    pct
+buggy               
+0      287054  89.61
+1       33294  10.39
+
+## Source x buggy
+buggy        0      1
+Source               
+after   153351      0
+before  133703  33294
+
+## categorical 'extension' (11 levels) - top 15
+extension
+.c       62385
+.py      54520
+.h       52523
+.php     39861
+.js      33935
+.cpp     21794
+.java    21020
+.cc      20983
+.ts       5582
+.hpp      3966
+.hh       3779
+
+## categorical 'Ecosystem' (7 levels) - top 15
+Ecosystem
+OSS-Fuzz     128033
+GHSA          93299
+PyPI          42286
+Packagist     19960
+npm           19037
+NuGet          8985
+Maven          8748
+
+## numeric feature summary
+                          count        mean          std  min    25%     50%     75%       max
+AvgLineCode            320348.0   65.951352  2073.927834  0.0   2.00   11.00   24.00  290674.0
+CountDeclClass         320348.0    1.208829     4.599679  0.0   0.00    0.00    1.00     335.0
+RatioCommentToCode     320348.0    0.816562     4.388494  0.0   0.06    0.24    0.65     396.0
+CountStmtExe           320348.0  105.048725   714.366830  0.0   1.00   16.00   75.00   88818.0
+AvgCyclomaticStrict    320348.0    6.143384   205.934294  0.0   1.00    1.00    3.00   22472.0
+CountLine              320348.0  437.054722  1666.660622  0.0  50.00  132.00  366.00   98330.0
+SumCyclomatic          320348.0   47.632940   546.924204  0.0   1.00    9.00   32.00  121890.0
+AvgCyclomatic          320348.0    5.650946   194.400689  0.0   1.00    1.00    3.00   21170.0
+SumEssential           320348.0   26.916793   236.218054  0.0   1.00    6.00   20.00   43108.0
+MaxCyclomatic          320348.0    7.995673    80.335549  0.0   1.00    2.00    7.00   20121.0
+AvgLineComment         320348.0    8.467713   216.014099  0.0   0.00    1.00    4.00   46685.0
+AvgCyclomaticModified  320348.0    5.505941   194.258077  0.0   1.00    1.00    3.00   21161.0
+AvgEssential           320348.0    1.284964     3.549512  0.0   1.00    1.00    1.00    1104.0
+SumCyclomaticModified  320348.0   45.855909   506.963064  0.0   1.00    9.00   31.00  110753.0
+CountLineComment       320348.0   67.865846   202.527591  0.0   6.00   24.00   56.00   10979.0
+CountLineCode          320348.0  268.085476  1250.479560  0.0  27.00   68.00  212.00   98317.0
+MaxCyclomaticModified  320348.0    7.393160    77.998733  0.0   1.00    2.00    7.00   19683.0
+CountLineBlank         320348.0   49.292263   147.785158  0.0   6.00   17.00   45.00    6961.0
+CountStmtDecl          320348.0   43.548753   194.053470  0.0   4.00   14.00   37.00   30983.0
+AvgLine                320348.0   93.871668  3437.418435  0.0   4.00   15.00   32.00  615633.0
+MaxEssential           320348.0    3.755148    12.680057  0.0   1.00    1.00    4.00    2339.0
+CountDeclFunction      320348.0   15.213243   142.603858  0.0   0.00    4.00   12.00   25465.0
+MaxNesting             320348.0    1.580921     1.886287  0.0   0.00    1.00    3.00      55.0
+AvgLineBlank           320348.0   11.414966   513.284210  0.0   0.00    1.00    4.00   77859.0
+SumCyclomaticStrict    320348.0   55.343503   705.335996  0.0   1.00    9.00   34.00  157335.0
+CountStmt              320348.0  143.557341   857.166779  0.0   8.00   34.00  111.00  107219.0
+
+rows whose feature vector + label duplicates another row: 202606 (63.2%)

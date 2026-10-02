@@ -1,0 +1,8 @@
+              precision    recall  f1-score   support
+
+   Clean (0)     0.9778    0.5586    0.7110     19527
+  Smelly (1)     0.1676    0.8750    0.2814      1984
+
+    accuracy                         0.5877     21511
+   macro avg     0.5727    0.7168    0.4962     21511
+weighted avg     0.9030    0.5877    0.6713     21511

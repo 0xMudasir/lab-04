@@ -1,0 +1,12 @@
+# Virtual environments
+.venv/
+.venv-1/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Files over GitHub's 100 MB limit
+multi-smell-dataset-v1_2.csv
+paper_dataset/result_total_bon.csv
+*.pkl
